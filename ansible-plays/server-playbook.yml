@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  remote_user: root 
+  roles:
+  - nginx_for_nodejs
+
+- hosts: all
+  become: yes
+  remote_user: root
+  roles:
+  - nodejs
