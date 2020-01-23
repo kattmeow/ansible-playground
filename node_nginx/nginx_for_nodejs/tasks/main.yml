@@ -1,0 +1,17 @@
+---
+# tasks file for nginx_for_nodejs
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: latest
+
+- name: Create Nginx virtual host
+  template:
+    src: vhost.j2
+    dest: /etc/nginx/sites-enabled/{{ domain_name }}
+  notify: restart nginx
+
+- name: Create web-root directory
+  file:
+    path: /var/www/{{ domain_name }}
+    state: directory
