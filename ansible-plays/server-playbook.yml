@@ -10,3 +10,9 @@
   remote_user: root
   roles:
   - nodejs
+
+- hosts: all
+  become: yes
+  remote_user: root
+  roles:
+  - postgresql

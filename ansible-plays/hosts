@@ -1,2 +1,2 @@
 [nodejs]
-playkat ansible_host=10.0.0.3
+playkat ansible_host=10.0.0.3 ansible_hostname=testapp.cyberwhale.com
