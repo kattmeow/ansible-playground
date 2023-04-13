@@ -11,7 +11,7 @@
     dest: /etc/nginx/sites-enabled/{{ domain_name }}
   notify: restart nginx
 
-- name: Create root directory
+- name: Create web-root directory
   file:
     path: /var/www/{{ domain_name }}
     state: directory
